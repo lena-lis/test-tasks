@@ -13,21 +13,398 @@
   <link rel="preload" href="fonts/lato-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato-700.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rouble.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Поиск</title>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <div class="container"></div>
+      <div class="main-header">
+        <div class="main-header__overlay" data-backdrop="static" data-menu-overlay></div>
+        <div class="main-header__container container">
+          <div class="main-header__logo-container logo">
+            <a class="logo__link" href="#">
+              <div class="logo__part">
+                <svg aria-hidden="true" focusable="false" width="42" height="46">
+                  <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <svg aria-hidden="true" focusable="false" width="149" height="32">
+                <use xlink:href="sprite.svg#logo-text"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="main-navigation" data-nav-main>
+            <button class="main-navigation__toggle" type="button" aria-label="Открыть меню" data-nav-toggle>
+              <span class="main-navigation__toggle-icon"></span>
+            </button>
+            <div class="main-navigation__terms terms">
+              <ul>
+                <li class="terms__item">
+                  <a href="#">Доставка и оплата</a>
+                </li>
+                <li class="terms__item">
+                  <a href="#">Гарантия и возврат</a>
+                </li>
+                <li class="terms__item">
+                  <button class="terms__lang-btn btn" type="button">EN</button>
+                </li>
+              </ul>
+            </div>
+            <div class="main-navigation__menu menu" data-nav-menu>
+              <ul>
+                <li>
+                  <a class="menu__link" href="#">Каталог</a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#">О компании</a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-navigation__search search">
+              <form class="search__form" action="#" method="GET">
+                <input type="search" name="search" placeholder="Лампы" required>
+                <button class="search__btn btn" type="submit">
+                  <svg aria-hidden="true" focusable="false" width="22" height="23">
+                    <use xlink:href="sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <button class="search__cart btn" type="button">
+                <svg aria-hidden="true" focusable="false" width="21" height="27">
+                  <use xlink:href="sprite.svg#cart"></use>
+                </svg>
+                <span>Корзина</span>
+                <span class="search__cart-amount" data-cart-amount>3</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
       <section class="search container">
         <h1>Результаты поиска</h1>
+        <ul class="search__list">
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.webp 1x, img/card/markt-built-in-lamp-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/markt-built-in-lamp-mobile.webp 1x, img/card/markt-built-in-lamp-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.jpg 1x, img/card/markt-built-in-lamp-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/markt-built-in-lamp-mobile.jpg" width="155" height="230" srcset="img/card/markt-built-in-lamp-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__sale-container">
+              <span>Акция</span>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Встраиваемый светильник Markt
+                <a href="#"></a>
+              </h2>
+              <span class="card__price card__price--new">3 490<span class="rouble">₽</span></span>
+              <span class="card__price card__price--old">5 060<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.webp 1x, img/card/linear-lamp-ARS-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/linear-lamp-ARS-mobile.webp 1x, img/card/linear-lamp-ARS-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.jpg 1x, img/card/linear-lamp-ARS-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/linear-lamp-ARS-mobile.jpg" width="155" height="230" srcset="img/card/linear-lamp-ARS-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Линейный светильник ARG
+                <a href="#"></a>
+              </h2>
+              <span class="card__price">6 700<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/led-lamp-desktop.webp 1x, img/card/led-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/led-lamp-desktop-2.webp 1x, img/card/led-lamp-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/led-lamp-desktop.webp 1x, img/card/led-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/led-lamp-mobile.webp 1x, img/card/led-lamp-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/led-lamp-desktop.jpg 1x, img/card/led-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/led-lamp-desktop-2.jpg 1x, img/card/led-lamp-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/led-lamp-desktop.jpg 1x, img/card/led-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/led-lamp-mobile.jpg" width="155" height="230" srcset="img/card/led-lamp-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__sale-container">
+              <span>Акция</span>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Сведодиодный светильник
+                <a href="#"></a>
+              </h2>
+              <span class="card__price card__price--new">5 060<span class="rouble">₽</span></span>
+              <span class="card__price card__price--old">6 060<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.webp 1x, img/card/markt-built-in-lamp-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/markt-built-in-lamp-mobile.webp 1x, img/card/markt-built-in-lamp-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.jpg 1x, img/card/markt-built-in-lamp-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/markt-built-in-lamp-mobile.jpg" width="155" height="230" srcset="img/card/markt-built-in-lamp-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Встраиваемый светильник Markt
+                <a href="#"></a>
+              </h2>
+              <span class="card__price">3 490<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.webp 1x, img/card/linear-lamp-ARS-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/linear-lamp-ARS-mobile.webp 1x, img/card/linear-lamp-ARS-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.jpg 1x, img/card/linear-lamp-ARS-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/linear-lamp-ARS-mobile.jpg" width="155" height="230" srcset="img/card/linear-lamp-ARS-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__sale-container">
+              <span>Акция</span>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Линейный светильник ARG
+                <a href="#"></a>
+              </h2>
+              <span class="card__price card__price--new">6 700<span class="rouble">₽</span></span>
+              <span class="card__price card__price--old">6 060<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/led-lamp-desktop.webp 1x, img/card/led-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/led-lamp-desktop-2.webp 1x, img/card/led-lamp-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/led-lamp-desktop.webp 1x, img/card/led-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/led-lamp-mobile.webp 1x, img/card/led-lamp-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/led-lamp-desktop.jpg 1x, img/card/led-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/led-lamp-desktop-2.jpg 1x, img/card/led-lamp-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/led-lamp-desktop.jpg 1x, img/card/led-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/led-lamp-mobile.jpg" width="155" height="230" srcset="img/card/led-lamp-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Сведодиодный светильник
+                <a href="#"></a>
+              </h2>
+              <span class="card__price">5 060<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.webp 1x, img/card/markt-built-in-lamp-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.webp 1x, img/card/markt-built-in-lamp-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/markt-built-in-lamp-mobile.webp 1x, img/card/markt-built-in-lamp-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop-2.jpg 1x, img/card/markt-built-in-lamp-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/markt-built-in-lamp-desktop.jpg 1x, img/card/markt-built-in-lamp-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/markt-built-in-lamp-mobile.jpg" width="155" height="230" srcset="img/card/markt-built-in-lamp-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__sale-container">
+              <span>Акция</span>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Встраиваемый светильник Markt
+                <a href="#"></a>
+              </h2>
+              <span class="card__price card__price--new">3 490<span class="rouble">₽</span></span>
+              <span class="card__price card__price--old">6 060<span class="rouble">₽</span></span>
+            </div>
+          </li>
+
+          <li class="search__item card">
+            <div class="card__image-container">
+              <picture>
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.webp 1x, img/card/linear-lamp-ARS-desktop-2@2x.webp 2x" type="image/webp" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.webp 1x, img/card/linear-lamp-ARS-desktop@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                <source srcset="img/card/linear-lamp-ARS-mobile.webp 1x, img/card/linear-lamp-ARS-mobile@2x.webp 2x" type="image/webp">
+  
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 1920px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop-2.jpg 1x, img/card/linear-lamp-ARS-desktop-2@2x.jpg 2x" width="288" height="429" type="image/jpeg" media="(min-width: 1600px)">
+                <source srcset="img/card/linear-lamp-ARS-desktop.jpg 1x, img/card/linear-lamp-ARS-desktop@2x.jpg 2x" width="320" height="477" type="image/jpeg" media="(min-width: 768px)">
+                <img src="img/card/linear-lamp-ARS-mobile.jpg" width="155" height="230" srcset="img/card/linear-lamp-ARS-mobile@2x.jpg 2x" alt="Встраиваемый светильник Markt.">
+              </picture>
+            </div>
+            <div class="card__btn-container">
+              <button class="card__btn btn" type="button">Подробнее</button>
+            </div>
+            <div class="card__description">
+              <h2>
+                Линейный светильник ARG
+                <a href="#"></a>
+              </h2>
+              <span class="card__price">6 700<span class="rouble">₽</span></span>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>
-      <div class="container"></div>
+      <div class="main-footer">
+        <div class="main-footer__container container">
+          <div class="main-footer__logo-container logo">
+            <a class="logo__link" href="#">
+              <div class="logo__part">
+                <svg aria-hidden="true" focusable="false" width="42" height="46">
+                  <use xlink:href="sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <svg aria-hidden="true" focusable="false" width="149" height="32">
+                <use xlink:href="sprite.svg#logo-text"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="main-footer__privacy">
+            <p>Этот сайт защищен от спама службой reCAPTCHA Google. <a class="main-footer__link main-footer__link--privacy" href="#">Политика конфиденциальности</a>/<a class="main-footer__link main-footer__link--terms" href="#">Условия предоставления услуг</a></p>
+          </div>
+
+          <div class="main-footer__contacts contacts">
+            <h2 class="visually-hidden">Связаться с нами:</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3>Адрес</h3>
+                <address>Текст, Текст, Текст</address>
+              </li>
+              <li class="contacts__item">
+                <h3>Контакты</h3>
+                <ul class="contacts__list contacts__list--inner">
+                  <li>
+                    <h4>Email:</h4>
+                    <a href="mailto:urban.dwelling@yandex.com">urban.dwelling@yandex.com</a>
+                  </li>
+                  <li>
+                    <h4>Телефон:</h4>
+                    <a href="tel:+79999999999">8 (999) 999-99-99</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="main-footer__services services">
+            <h2>Услуги</h2>
+            <ul>
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+              <li>
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li>
+                <a href="#">Гарантия и возврат</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="main-footer__info info">
+            <a class="info__public-offer" href="#">Публичная оферта</a>
+            <a class="info__privacy-policy" href="#">Политика персональных данных</a>
+            <div class="info__payment">
+              <ul>
+                <li>
+                  <svg aria-hidden="true" focusable="false" width="46" height="13">
+                    <use xlink:href="sprite.svg#mir"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg aria-hidden="true" focusable="false" width="45" height="14">
+                    <use xlink:href="sprite.svg#visa"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg aria-hidden="true" focusable="false" width="49" height="29">
+                    <use xlink:href="sprite.svg#master-card"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </body>
