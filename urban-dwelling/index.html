@@ -40,47 +40,51 @@
               <span class="main-navigation__toggle-icon"></span>
             </button>
             <div class="main-navigation__terms terms">
-              <ul>
-                <li class="terms__item">
-                  <a href="#">Доставка и оплата</a>
-                </li>
-                <li class="terms__item">
-                  <a href="#">Гарантия и возврат</a>
-                </li>
-                <li class="terms__item">
-                  <button class="terms__lang-btn btn" type="button">EN</button>
-                </li>
-              </ul>
+              <div class="terms__container container">
+                <ul>
+                  <li class="terms__item">
+                    <a href="#">Доставка и оплата</a>
+                  </li>
+                  <li class="terms__item">
+                    <a href="#">Гарантия и возврат</a>
+                  </li>
+                  <li class="terms__item">
+                    <button class="terms__lang-btn btn" type="button">EN</button>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="main-navigation__menu menu" data-nav-menu>
-              <ul>
-                <li>
-                  <a class="menu__link" href="#">Каталог</a>
-                </li>
-                <li>
-                  <a class="menu__link" href="#">О компании</a>
-                </li>
-                <li>
-                  <a class="menu__link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="main-navigation__search search">
-              <form class="search__form" action="#" method="GET">
-                <input type="search" name="search" placeholder="Лампы" required>
-                <button class="search__btn btn" type="submit">
-                  <svg aria-hidden="true" focusable="false" width="22" height="23">
-                    <use xlink:href="sprite.svg#search"></use>
+            <div class="main-navigation__inner">
+              <div class="main-navigation__menu menu" data-nav-menu>
+                <ul>
+                  <li>
+                    <a class="menu__link" href="#">Каталог</a>
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-navigation__search search">
+                <form class="search__form" action="#" method="GET">
+                  <input type="search" name="search" placeholder="Лампы" required>
+                  <button class="search__btn btn" type="submit">
+                    <svg aria-hidden="true" focusable="false" width="22" height="23">
+                      <use xlink:href="sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </form>
+                <button class="search__cart btn" type="button">
+                  <svg aria-hidden="true" focusable="false" width="21" height="27">
+                    <use xlink:href="sprite.svg#cart"></use>
                   </svg>
+                  <span>Корзина</span>
+                  <span class="search__cart-amount" data-cart-amount>3</span>
                 </button>
-              </form>
-              <button class="search__cart btn" type="button">
-                <svg aria-hidden="true" focusable="false" width="21" height="27">
-                  <use xlink:href="sprite.svg#cart"></use>
-                </svg>
-                <span>Корзина</span>
-                <span class="search__cart-amount" data-cart-amount>3</span>
-              </button>
+              </div>
             </div>
           </nav>
         </div>
