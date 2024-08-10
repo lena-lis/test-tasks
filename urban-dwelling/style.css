@@ -195,7 +195,6 @@ img {
 }
 
 .main-header__container {
-  position: relative;
   display: grid;
   grid-template-columns: 217px 1fr;
   align-items: center;
@@ -422,6 +421,10 @@ input[type="search"]::placeholder {
   }
 }
 
+.card--mobile {
+  display: none;
+}
+
 .card__image-container {
   position: relative;
   margin-bottom: 24px;
@@ -601,6 +604,10 @@ input[type="search"]::placeholder {
   font-size: 1.125rem;
 }
 
+.contacts__item address {
+  font-style: normal;
+}
+
 .contacts__item:last-of-type h3 {
   margin-bottom: 21px;
 }
@@ -762,6 +769,10 @@ input[type="search"]::placeholder {
 }
 
 @media (min-width: 1200px) and (max-width: 1919px) {
+  .main-header__container {
+    position: relative;
+  }
+
   /* SEARCH */
 
   .search {
@@ -1112,13 +1123,38 @@ input[type="search"]::placeholder {
   }
 }
 
-/* @media (max-width: 769px) {
+@media (max-width: 769px) {
   .container {
     padding-right: 35px;
     padding-left: 35px;
   }
 
+  .main-header {
+    margin-bottom: 48px;
+  }
+
+  .main-header__container {
+    padding-top: 10px;
+  }
+
+  .main-header__toggle-container {
+    margin-right: 0;
+  }
+
+  .terms ul {
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    padding: 10px;
+    padding-right: 0;
+  }
+
+  .search-result {
+    margin-bottom: 42px;
+  }
+
   .search-result h1 {
+    margin-bottom: 27px;
     font-size: 1.5rem;
   }
 
@@ -1126,19 +1162,137 @@ input[type="search"]::placeholder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
-    row-gap: 30px;
+    row-gap: 33px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card__image-container {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .card__image-container img {
     min-width: 155px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card__btn-container {
+    display: none;
+  }
+
+  .card__description {
+    position: relative;
   }
 
   .card__description h2 {
+    margin-bottom: 8px;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 140%;
+  }
+
+  .card__description a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
   }
 
   .card__price {
     font-size: 1rem;
   }
-}  */
+
+  .card__price + .card__price {
+    margin-left: 5px;
+  }
+
+  .card__price--new {
+    font-size: 1rem;
+  }
+
+  .card__price--old {
+    font-size: 0.875rem;
+  }
+
+  .card__price .rouble {
+    margin-left: 4px;
+  }
+
+  .card__sale-container {
+    min-width: 70px;
+    padding: 2px;
+    font-size: 0.875rem;
+  }
+
+  .card--desktop {
+    display: none;
+  }
+
+  .card--mobile {
+    display: block;
+  }
+
+  .main-footer__container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 36px;
+    padding-bottom: 39px;
+  }
+
+  .main-footer__logo-container,
+  .main-footer__contacts,
+  .main-footer__services,
+  .main-footer__info,
+  .main-footer__payment {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+
+  .main-footer__logo-container {
+    margin-left: 3px;
+  }
+
+  .main-footer__privacy {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+  }
+
+  .main-footer__privacy p {
+    margin: 0;
+  }
+
+  .contacts__list:not(.contacts__list--inner) {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .contacts__item h3 {
+    margin-bottom: 15px;
+  }
+
+  .contacts__item:last-of-type h3 {
+    margin-bottom: 11px;
+  }
+
+  .main-footer__services {
+    padding-left: 1px;
+  }
+
+  .services ul {
+    gap: 20px;
+  }
+
+  .info {
+    padding-top: 3px;
+  }
+
+  .payment ul {
+    margin-top: 47px;
+  }
+} 
