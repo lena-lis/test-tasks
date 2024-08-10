@@ -36,10 +36,12 @@
               </svg>
             </a>
           </div>
-          <nav class="main-navigation" data-nav-main>
-            <button class="main-navigation__toggle" type="button" aria-label="Открыть меню" data-nav-toggle>
-              <span class="main-navigation__toggle-icon"></span>
+          <div class="main-header__toggle-container">
+            <button class="main-header__toggle" type="button" aria-label="Открыть меню" data-nav-toggle>
+              <span class="main-header__toggle-icon"></span>
             </button>
+          </div>
+          <nav class="main-navigation" data-nav-main>
             <div class="main-navigation__terms terms">
               <div class="terms__container container">
                 <ul>
@@ -324,7 +326,7 @@
       <div class="main-footer">
         <div class="main-footer__container container">
           <div class="main-footer__logo-container logo">
-            <a class="logo__link" href="#">
+            <a class="logo__link logo__link--footer" href="#">
               <div class="logo__part logo__part--footer">
                 <svg aria-hidden="true" focusable="false" width="42" height="46">
                   <use xlink:href="sprite.svg#logo"></use>
@@ -350,11 +352,11 @@
               <li class="contacts__item">
                 <h3>Контакты</h3>
                 <ul class="contacts__list contacts__list--inner">
-                  <li>
+                  <li class="contacts__inner-item">
                     <h4>Email:</h4>
                     <a href="mailto:urban.dwelling@yandex.com">urban.dwelling@yandex.com</a>
                   </li>
-                  <li>
+                  <li class="contacts__inner-item">
                     <h4>Телефон:</h4>
                     <a href="tel:+79999999999">8 (999) 999-99-99</a>
                   </li>
@@ -389,7 +391,7 @@
             <a class="info__privacy-policy" href="#">Политика персональных данных</a>
           </div>
           
-          <div class="main-footer__payment">
+          <div class="main-footer__payment payment">
             <ul>
               <li>
                 <svg aria-hidden="true" focusable="false" width="46" height="13">
