@@ -1161,6 +1161,7 @@ input[type="search"]:focus-visible{
 
   .menu ul {
     flex-direction: column;
+    margin-left: 0;
   }
 
   .menu li {
@@ -1317,6 +1318,10 @@ input[type="search"]:focus-visible{
 
   .main-header__toggle-container {
     margin-right: 0;
+  }
+
+  .menu ul {
+    margin-left: 0;
   }
 
   .terms ul {
