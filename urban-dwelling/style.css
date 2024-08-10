@@ -334,11 +334,13 @@ img {
 }
 
 .menu ul {
-  gap: 100px;
+  column-gap: 100px;
+  row-gap: 25px;
+  margin-left: 25px;
 }
 
 .menu li {
-  transition: color 0.3 s ease;
+  transition: color 0.3s ease;
 }
 
 .menu__link {
