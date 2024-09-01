@@ -1,0 +1,21 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 40px;
+
+  a {
+    line-height: 0;
+  }
+
+  @media (max-width: 767px) {
+    right: 0;
+  }
+}
+
+.main-header__logo {
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
+}
